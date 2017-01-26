@@ -36,6 +36,7 @@ app.use(
 );
 
 app.get('/', routes.index);
+app.get('/okr', okr.list);
 app.get('/okr/add', okr.add);
 app.post('/okr/add', okr.save);
 app.get('/okr/delete:id',okr.delete_okr);
