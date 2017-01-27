@@ -1,11 +1,12 @@
 exports.list = function(req,res){
 	req.getConnection(function(err,connection){
 		console.log(connection);
-		var query = connection.query('SELECT * FROM keyResult', 
+		var query = connection.query('SELECT kr.*, obj.* FROM keyResult kr, objective obj', 
 			function(err,rows){
 				if(err)
 					console.log('error selecting db');
-				res.render('okr',{page_title:"okr list",data:rows});
+				console.log(rows.obj);
+				res.render('okr',{page_title:"okr list",data:rows, obj_name:rows[0].obj_name});
 			});
 	});
 };
