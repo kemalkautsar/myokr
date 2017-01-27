@@ -5,7 +5,7 @@ exports.list = function(req,res){
 			function(err,rows){
 				if(err)
 					console.log('error selecting db');
-				console.log(rows.obj);
+				console.log(rows);
 				res.render('okr',{page_title:"okr list",data:rows, obj_name:rows[0].obj_name});
 			});
 	});
