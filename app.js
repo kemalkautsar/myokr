@@ -34,7 +34,7 @@ app.use(
 		database: 'okrdb'
 	}, 'pool')
 );
-
+var connection = mysql.createConnection({multipleStatements: true});
 app.get('/', routes.index);
 app.get('/okr', okr.list);
 app.get('/okr/add', okr.add);
