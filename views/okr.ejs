@@ -6,7 +6,7 @@
          </div>
 
          <div class="data-table">
-            Objective : <%= obj_name%>
+            Objective : <%= data[0,0].obj.obj_name%>
             <table border="1" cellpadding="7" cellspacing="7">
                 <tr>
                     <th width="50px">No</th>
@@ -21,8 +21,8 @@
                  
                 <tr>
                     <td><%=(i+1)%></td>
-                    <td><%=data[i].key_name%></td>
-                    <td><%=data[i].key_score%></td>
+                    <td><%=data[0,i].kr.key_name%></td>
+                    <td><%=data[0,i].kr.key_score%></td>
                     <td>
                         <a class="a-inside edit" href="../customers/edit/<%=data[i].id%>">Edit</a>
                        
