@@ -6,7 +6,8 @@
          </div>
 
          <div class="data-table">
-            Objective : <%= data[0,0].obj.obj_name%>
+
+        Objective : <%= data[0].obj_obj_name %>
             <table border="1" cellpadding="7" cellspacing="7">
                 <tr>
                     <th width="50px">No</th>
@@ -17,12 +18,12 @@
                                
                 <% if(data.length){ 
                                 
-                 for(var i = 0;i < data.length;i++) { %>
+                 for(var i = 0;i < (data.length/2);i++) { %>
                  
                 <tr>
                     <td><%=(i+1)%></td>
-                    <td><%=data[0,i].kr.key_name%></td>
-                    <td><%=data[0,i].kr.key_score%></td>
+                    <td><%=data[i].kr_key_name%></td>
+                    <td><%=data[i].kr_key_score%></td>
                     <td>
                         <a class="a-inside edit" href="../customers/edit/<%=data[i].id%>">Edit</a>
                        

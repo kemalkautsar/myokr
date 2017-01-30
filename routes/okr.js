@@ -1,12 +1,12 @@
 exports.list = function(req,res){
 	req.getConnection(function(err,connection){
 		console.log(connection);
-		var da_query = {sql: 'SELECT kr.*, obj.* FROM keyResult kr, objective obj', nestTables:true}
-		var query = connection.query(da_query, 
+	    var da_query = {sql: 'SELECT kr.*, obj.* FROM keyResult kr, objective obj', nestTables:'_'} 
+	    var query = connection.query(da_query,  
 			function(err,rows){
 				if(err)
 					console.log('error selecting db');
-				console.log(rows[0,0].obj.obj_name);
+				console.log(rows);
 				res.render('okr',{page_title:"okr list",data:rows});
 			});
 	});

@@ -48,3 +48,5 @@ app.post('/okr/edit',okr.save_edit);
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('OKR application is running on localhost:' + app.get('port'));
 });
+
+var connection = mysql.createConnection({multipleStatements: true});
