@@ -39,9 +39,9 @@ app.get('/', routes.index);
 app.get('/okr', okr.list);
 app.get('/okr/add', okr.add);
 app.post('/okr/add', okr.save);
-app.get('/okr/delete:id',okr.delete_okr);
-app.get('/okr/edit:id',okr.edit);
-app.post('/okr/edit',okr.save_edit);
+app.get('/okr/delete/:id',okr.delete_okr);
+app.get('/okr/edit/:id',okr.edit);
+app.post('/okr/edit/:id',okr.save_edit);
 
 //app.use(app.router);
 

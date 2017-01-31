@@ -7,8 +7,8 @@
 
          <div class="data-table">
 
-         <%= data[0].obj_obj_name%>
-            Objective : <%= data.obj%>
+            <h2>Objective : <%= data[0].obj_obj_name%><h2>
+            <h4>grade score : <%= avg%></h4>
             <table border="1" cellpadding="7" cellspacing="7">
                 <tr>
                     <th width="50px">No</th>
@@ -19,16 +19,16 @@
                                
                 <% if(data.length){ 
                                 
-                 for(var i = 0;i < (data.length/2);i++) { %>
+                 for(var i = 0;i < (data.length);i++) { %>
                  
                 <tr>
                     <td><%=(i+1)%></td>
-                    <td><%=data[i].kr_key_name%></td>
-                    <td><%=data[i].kr_key_score%></td>
+                    <td><%=data[i].key_name%></td>
+                    <td><%=data[i].key_score%></td>
                     <td>
-                        <a class="a-inside edit" href="../customers/edit/<%=data[i].id%>">Edit</a>
+                        <a class="a-inside edit" href="../okr/edit/<%=data[i].key_id%>">Edit</a>
                        
-                        <a class="a-inside delete" href="../customers/delete/<%=data[i].id%>">Delete</a>
+                        <a class="a-inside delete" href="../okr/delete/<%=data[i].key_id%>">Delete</a>
                        
                     </td>
                 </tr>

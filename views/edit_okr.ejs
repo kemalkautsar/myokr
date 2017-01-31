@@ -1,0 +1,25 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+            
+            <form method="post" action="/okr/edit/<%=data[0].key_id%>">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Name</td><td>: <input type="text" name="key_name" value="<%=data[0].key_name%>" required></td>
+                 </tr>
+                  <tr>
+                    <td class="label">key Score</td><td>: <input type="text" name="key_score" value="<%=data[0].key_score%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+<%- include layouts/footer.ejs %>
