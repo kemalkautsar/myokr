@@ -18,7 +18,7 @@ exports.list = function(req,res){
 };
 
 exports.add = function(req,res){
-	res.render('add Objective',{page_title:"add objective"});
+	res.render('add_okr',{page_title:"add okr"});
 };
 
 exports.edit = function(req,res){
@@ -83,7 +83,7 @@ exports.delete_okr = function(req,res){
 	var id = req.params.id;
 
 	req.getConnection(function(err,connection){
-		connection.query("DELETE FROM keyResult WHERE id = ?", [id],function(err,rows){
+		connection.query("DELETE FROM keyResult WHERE key_id = ?", [id],function(err,rows){
 			if(err)
 				console.log("error deleting : s", err);
 			res.redirect('/okr');
