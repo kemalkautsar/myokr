@@ -11,7 +11,7 @@ exports.list = function(req,res){
 				for (var i = 0 ; i < rows.length ; i++){
 					tot = tot + rows[i].key_score;
 				};
-				var avg = tot/rows.length;
+				var avg = (tot/rows.length).toFixed(2);
 				res.render('okr',{page_title:"okr list",data:rows,avg:avg});
 			});
 	});
